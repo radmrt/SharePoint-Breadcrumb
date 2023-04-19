@@ -73,12 +73,17 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             var libraryLocation = unescape(document.location).split("RootFolder=")[1].split("&Folder")[0].replace(siteServerRelativeUrl, '');
-
             var libraryNodes = libraryLocation.split('/');
             var libraryNodeURL = _spPageContextInfo.serverRequestPath + "?RootFolder=" + siteServerRelativeUrl;
+
+            console.log('test')
+            console.log(libraryNodes)
+
+            var valuesToIgore = ['icp', 'tohcc']
+
             $.each(libraryNodes, function (index, value) {
 
-                if (value != "") {
+                if ((value != "") or (!valuesToIgore.includes(value))  {
                     libraryNodeURL = libraryNodeURL + "/" + value;
                     $('#breadcrumbSite').append('<li class="ms-Breadcrumb-listItem"><a class="ms-Breadcrumb-itemLink" href="' + libraryNodeURL + '">' + value + '</a><i class="ms-Breadcrumb-chevron ms-Icon ms-Icon--ChevronRight"></i></li>');
 

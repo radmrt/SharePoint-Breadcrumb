@@ -82,7 +82,6 @@
     <Content Include="Style Library\FabricUIBreadcrumb\css\breadcrumb.css" />
     <Content Include="Style Library\FabricUIBreadcrumb\images\breadcrumb.png" />
     <Content Include="Style Library\FabricUIBreadcrumb\js\breadcrumb.js" />
-    <Content Include="Style Library\FabricUIBreadcrumb\js\jquery.min.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
